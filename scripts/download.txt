@@ -62,3 +62,7 @@ https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadap
   out=models/controlnet/t2iadapter_seg-fp16.safetensors
 https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors
   out=models/controlnet/t2iadapter_sketch-fp16.safetensors
+https://huggingface.co/TencentARC/GFPGANv1/resolve/main/GFPGANv1.pth
+  out=models/checkpoints/GFPGANv1.pth
+https://huggingface.co/henryruhs/roop/resolve/main/inswapper_128.onnx
+  out=models/roop/inswapper_128.onnx

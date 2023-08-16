@@ -9,10 +9,14 @@ LABEL maintainer="code@yanwk.fun"
 
 RUN --mount=type=cache,target=/var/cache/zypp \
     set -eu \
+    && zypper refresh \
     && zypper install --no-confirm \
         python310 python310-pip \
+        python310-devel \
         shadow git aria2 \
-        Mesa-libGL1
+        Mesa-libGL1 \
+        gcc gcc-c++ make \
+        ffmpeg ffmpeg-4
 
 # Install PyTorch nightly
 RUN --mount=type=cache,target=/root/.cache/pip \
@@ -27,32 +31,38 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pip install /root/wheels/*.whl \
     && rm -rf /root/wheels
 
-# Deps for main app
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install -r https://raw.githubusercontent.com/comfyanonymous/ComfyUI/master/requirements.txt
-
-# Deps for ControlNet Preprocessors
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install -r https://raw.githubusercontent.com/Fannovel16/comfy_controlnet_preprocessors/main/requirements.txt \
-    --extra-index-url https://download.pytorch.org/whl/nightly/cu118 
-
 # Fix for CuDNN
 WORKDIR /usr/lib64/python3.10/site-packages/torch/lib
 RUN ln -s libnvrtc-672ee683.so.11.2 libnvrtc.so 
 ENV LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/lib64/python3.10/site-packages/torch/lib"
 
-# Create a low-privilege user.
-RUN printf 'CREATE_MAIL_SPOOL=no' > /etc/default/useradd \
-    && mkdir -p /home/runner /home/scripts \
-    && groupadd runner \
-    && useradd runner -g runner -d /home/runner \
-    && chown runner:runner /home/runner /home/scripts
-
-COPY --chown=runner:runner scripts/. /home/scripts/
-
-USER runner:runner
-VOLUME /home/runner
 WORKDIR /home/runner
+
+RUN git clone "https://github.com/comfyanonymous/ComfyUI.git"
+
+WORKDIR /home/runner/ComfyUI
+RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt
+
+WORKDIR /home/runner/ComfyUI/custom_nodes/
+RUN git clone "https://github.com/ltdrdata/ComfyUI-Manager.git"
+RUN git clone "https://github.com/Fannovel16/comfy_controlnet_preprocessors.git"
+RUN git clone "https://github.com/LucianoCirino/efficiency-nodes-comfyui.git"
+RUN git clone "https://github.com/space-nuko/ComfyUI-OpenPose-Editor.git"
+RUN git clone "https://github.com/Gourieff/comfyui-reactor-node.git"
+RUN git clone "https://github.com/WASasquatch/was-node-suite-comfyui.git"
+RUN git clone "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
+RUN git clone "https://github.com/melMass/comfy_mtb.git"
+RUN git clone "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git"
+# RUN git clone "https://github.com/biegert/ComfyUI-CLIPSeg.git"
+RUN git clone "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
+
+WORKDIR /home/runner/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+RUN git submodule update --init --recursive
+
+COPY scripts/. /home/scripts/
+
 EXPOSE 8188
 ENV CLI_ARGS=""
+WORKDIR /home/runner/ComfyUI
+
 CMD ["bash","/home/scripts/entrypoint.sh"]
