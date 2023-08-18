@@ -10,6 +10,7 @@ services:
     volumes:
       - "./models:/home/runner/ComfyUI/models"
       - "./output:/home/runner/ComfyUI/output"
+      - "./backgrounds:/home/runner/ComfyUI/backgrounds"
     environment:
       - CLI_ARGS=
     deploy:
