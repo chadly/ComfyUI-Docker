@@ -2,8 +2,6 @@
 
 set -e
 
-/home/scripts/update.sh
-
 if [ ! -f "/home/runner/.download-complete" ] ; then
 	echo "########################################"
 	echo "Installing Custom Nodes..."
