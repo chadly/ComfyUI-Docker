@@ -28,7 +28,7 @@ if [ ! -f "/home/runner/.download-complete" ] ; then
 	echo "########################################"
 
 	python3.10 custom_nodes/ComfyUI-Impact-Pack/install.py
-	python3.10 custom_nodes/comfy_controlnet_preprocessors/install.py --no_download_ckpts
+	pip install -r custom_nodes/comfyui_controlnet_aux/requirements.txt
 	pip install -r custom_nodes/efficiency-nodes-comfyui/requirements.txt
 	pip install -r custom_nodes/comfyui-reactor-node/requirements.txt
 	pip install -r custom_nodes/was-node-suite-comfyui/requirements.txt

@@ -45,7 +45,7 @@ RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt
 
 WORKDIR /home/runner/ComfyUI/custom_nodes/
 RUN git clone "https://github.com/ltdrdata/ComfyUI-Manager.git"
-RUN git clone "https://github.com/Fannovel16/comfy_controlnet_preprocessors.git"
+RUN git clone "https://github.com/Fannovel16/comfyui_controlnet_aux/"
 RUN git clone "https://github.com/LucianoCirino/efficiency-nodes-comfyui.git"
 RUN git clone "https://github.com/space-nuko/ComfyUI-OpenPose-Editor.git"
 RUN git clone "https://github.com/Gourieff/comfyui-reactor-node.git"
@@ -53,7 +53,6 @@ RUN git clone "https://github.com/WASasquatch/was-node-suite-comfyui.git"
 RUN git clone "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
 RUN git clone "https://github.com/melMass/comfy_mtb.git"
 RUN git clone "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git"
-# RUN git clone "https://github.com/biegert/ComfyUI-CLIPSeg.git"
 RUN git clone "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
 
 WORKDIR /home/runner/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
