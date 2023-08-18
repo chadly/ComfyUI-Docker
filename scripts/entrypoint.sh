@@ -6,24 +6,6 @@ set -e
 
 if [ ! -f "/home/runner/.download-complete" ] ; then
 	echo "########################################"
-	echo "Downloading models..."
-	echo "########################################"
-
-	if ! aria2c \
-		--input-file=/home/scripts/download.txt \
-		--console-log-level=warn \
-		--allow-overwrite=false \
-		--auto-file-renaming=false \
-		--continue=true \
-		--max-connection-per-server=5; then
-		echo "Warning: aria2c download failed. Continuing..."
-	fi
-
-	# ensure face swapper has access to roop model
-	mkdir -p custom_nodes/comfyui-reactor-node/models/roop/
-	cp models/roop/inswapper_128.onnx custom_nodes/comfyui-reactor-node/models/roop/inswapper_128.onnx
-
-	echo "########################################"
 	echo "Installing Custom Nodes..."
 	echo "########################################"
 
