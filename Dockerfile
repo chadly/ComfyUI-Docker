@@ -57,6 +57,9 @@ RUN git clone "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
 WORKDIR /home/runner/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
 RUN git submodule update --init --recursive
 
+WORKDIR /home/runner/ComfyUI/custom_nodes/comfy_mtb
+RUN git submodule update --init --recursive
+
 COPY scripts/. /home/scripts/
 
 EXPOSE 8188
