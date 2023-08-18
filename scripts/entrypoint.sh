@@ -30,7 +30,6 @@ if [ ! -f "/home/runner/.download-complete" ] ; then
 	python3.10 custom_nodes/ComfyUI-Impact-Pack/install.py
 	pip install -r custom_nodes/comfyui_controlnet_aux/requirements.txt
 	pip install -r custom_nodes/efficiency-nodes-comfyui/requirements.txt
-	pip install -r custom_nodes/comfyui-reactor-node/requirements.txt
 	pip install -r custom_nodes/was-node-suite-comfyui/requirements.txt
 	python3.10 custom_nodes/comfy_mtb/install.py
 
