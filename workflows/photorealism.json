@@ -225,81 +225,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 123,
-      "type": "PixelKSampleUpscalerProvider",
-      "pos": [
-        2686,
-        -548
-      ],
-      "size": {
-        "0": 330,
-        "1": 350
-      },
-      "flags": {},
-      "order": 32,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 197
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 201
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 194
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 195
-        },
-        {
-          "name": "upscale_model_opt",
-          "type": "UPSCALE_MODEL",
-          "link": null,
-          "slot_index": 4
-        },
-        {
-          "name": "pk_hook_opt",
-          "type": "PK_HOOK",
-          "link": 187,
-          "slot_index": 5
-        }
-      ],
-      "outputs": [
-        {
-          "name": "UPSCALER",
-          "type": "UPSCALER",
-          "links": [
-            181
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PixelKSampleUpscalerProvider"
-      },
-      "widgets_values": [
-        "nearest-exact",
-        409740204767175,
-        "randomize",
-        20,
-        8,
-        "euler",
-        "normal",
-        0.3549999999999994,
-        false
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 108,
       "type": "CLIPTextEncode",
       "pos": [
@@ -705,7 +630,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -740,7 +665,7 @@
         "1": 307.9046325683594
       },
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "title": "Style",
       "properties": {
@@ -764,7 +689,7 @@
         "1": 118.58921813964844
       },
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "title": "Framing",
       "properties": {
@@ -788,7 +713,7 @@
         "1": 296.9696960449219
       },
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "title": "Lighting",
       "properties": {
@@ -812,7 +737,7 @@
         "1": 296.9696960449219
       },
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "title": "Camera Angle",
       "properties": {
@@ -836,7 +761,7 @@
         "1": 296.9696960449219
       },
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "title": "Camera Properties",
       "properties": {
@@ -860,7 +785,7 @@
         "1": 296.9696960449219
       },
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "title": "Photographer",
       "properties": {
@@ -884,7 +809,7 @@
         "1": 213.8636016845703
       },
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "outputs": [
         {
@@ -983,7 +908,7 @@
         "1": 200
       },
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "outputs": [
         {
@@ -1153,7 +1078,7 @@
         "1": 288.0140075683594
       },
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "outputs": [
         {
@@ -1416,7 +1341,7 @@
         "1": 178
       },
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -1627,7 +1552,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 4,
+      "order": 15,
       "mode": 0,
       "outputs": [
         {
@@ -1645,6 +1570,81 @@
       },
       "widgets_values": [
         "control_canny-fp16.safetensors"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 123,
+      "type": "PixelKSampleUpscalerProvider",
+      "pos": [
+        2686,
+        -548
+      ],
+      "size": {
+        "0": 330,
+        "1": 350
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 197
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 201
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 194
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 195
+        },
+        {
+          "name": "upscale_model_opt",
+          "type": "UPSCALE_MODEL",
+          "link": null,
+          "slot_index": 4
+        },
+        {
+          "name": "pk_hook_opt",
+          "type": "PK_HOOK",
+          "link": 187,
+          "slot_index": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "UPSCALER",
+          "type": "UPSCALER",
+          "links": [
+            181
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PixelKSampleUpscalerProvider"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        409740204767175,
+        "fixed",
+        20,
+        8,
+        "euler",
+        "normal",
+        0.3549999999999994,
+        false
       ],
       "color": "#233",
       "bgcolor": "#355"
