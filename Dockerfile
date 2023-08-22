@@ -71,6 +71,10 @@ WORKDIR /home/runner/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
 RUN git submodule update --init --recursive
 RUN --mount=type=cache,target=/root/.cache/pip python3.10 install.py
 
+WORKDIR /home/runner/ComfyUI/custom_nodes/
+
+RUN git clone "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git"
+
 COPY scripts/. /home/scripts/
 
 EXPOSE 8188
