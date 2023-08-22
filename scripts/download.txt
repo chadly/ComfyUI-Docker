@@ -55,6 +55,70 @@ https://huggingface.co/stabilityai/control-lora/resolve/main/revision/clip_visio
 
 ################################################################################
 
+# ControlNet
+
+https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control_canny-fp16.safetensors
+
+https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control_depth-fp16.safetensors
+
+https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_hed-fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control_hed-fp16.safetensors
+
+https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_mlsd-fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control_mlsd-fp16.safetensors
+
+https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_normal-fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control_normal-fp16.safetensors
+
+https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_openpose-fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control_openpose-fp16.safetensors
+
+https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_scribble-fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control_scribble-fp16.safetensors
+
+https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_seg-fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control_seg-fp16.safetensors
+
+https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_canny_fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=diff_control_sd15_canny_fp16.safetensors
+
+https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_depth_fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=diff_control_sd15_depth_fp16.safetensors
+
+https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_hed_fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=diff_control_sd15_hed_fp16.safetensors
+
+https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_mlsd_fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=diff_control_sd15_mlsd_fp16.safetensors
+
+https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_normal_fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=diff_control_sd15_normal_fp16.safetensors
+
+https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_openpose_fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=diff_control_sd15_openpose_fp16.safetensors
+
+https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_scribble_fp16.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=diff_control_sd15_scribble_fp16.safetensors
+
+################################################################################
+
 # VAE
 
 https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
