@@ -61,12 +61,15 @@ RUN git clone "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
 RUN git clone "https://github.com/melMass/comfy_mtb.git"
 WORKDIR /home/runner/ComfyUI/custom_nodes/comfy_mtb
 RUN git submodule update --init --recursive
+RUN --mount=type=cache,target=/root/.cache/pip python3.10 install.py
 
+RUN echo invalidate docker cache
 WORKDIR /home/runner/ComfyUI/custom_nodes/
 
-RUN git clone "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
+RUN git clone "https://github.com/chadly/ComfyUI-Impact-Pack.git"
 WORKDIR /home/runner/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
 RUN git submodule update --init --recursive
+RUN --mount=type=cache,target=/root/.cache/pip python3.10 install.py
 
 COPY scripts/. /home/scripts/
 

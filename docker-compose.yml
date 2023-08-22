@@ -9,7 +9,9 @@ services:
       - "8188:8188"
     volumes:
       - "./models:/home/runner/ComfyUI/models"
+      - "./input:/home/runner/ComfyUI/input"
       - "./output:/home/runner/ComfyUI/output"
+      - "./workflows:/home/runner/ComfyUI/pysssss-workflows"
       - "./backgrounds:/home/runner/ComfyUI/backgrounds"
     environment:
       - CLI_ARGS=

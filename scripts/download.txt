@@ -1,0 +1,142 @@
+# Checkpoints
+
+https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
+  dir=/home/runner/ComfyUI/models/checkpoints
+  out=sd_xl_base_1.0.safetensors
+
+https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
+  dir=/home/runner/ComfyUI/models/checkpoints
+  out=sd_xl_refiner_1.0.safetensors
+
+https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt
+  dir=/home/runner/ComfyUI/models/checkpoints
+  out=sd-v1-5-inpainting.ckpt
+
+
+https://huggingface.co/SG161222/Realistic_Vision_V5.1_noVAE/resolve/main/Realistic_Vision_V5.1.safetensors
+  dir=/home/runner/ComfyUI/models/checkpoints
+  out=Realistic_Vision_V5.1.safetensors
+
+https://huggingface.co/SG161222/Realistic_Vision_V5.1_noVAE/resolve/main/Realistic_Vision_V5.1-inpainting.safetensors
+  dir=/home/runner/ComfyUI/models/checkpoints
+  out=Realistic_Vision_V5.1-inpainting.safetensors
+
+# Rev Animated
+https://civitai.com/api/download/models/46846
+  dir=/home/runner/ComfyUI/models/checkpoints
+
+# Photon
+https://civitai.com/api/download/models/90072
+  dir=/home/runner/ComfyUI/models/checkpoints
+
+################################################################################
+
+# Control LORA
+
+https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank256/control-lora-canny-rank256.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control-lora-canny-rank256.safetensors
+
+https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank256/control-lora-depth-rank256.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control-lora-depth-rank256.safetensors
+
+https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank256/control-lora-recolor-rank256.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control-lora-recolor-rank256.safetensors
+
+https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank256/control-lora-sketch-rank256.safetensors
+  dir=/home/runner/ComfyUI/models/controlnet
+  out=control-lora-sketch-rank256.safetensors
+
+https://huggingface.co/stabilityai/control-lora/resolve/main/revision/clip_vision_g.safetensors
+  dir=/home/runner/ComfyUI/models/clip_vision
+  out=clip_vision_g.safetensors
+
+################################################################################
+
+# VAE
+
+https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
+  dir=/home/runner/ComfyUI/models/vae
+  out=vae-ft-mse-840000-ema-pruned.safetensors
+
+################################################################################
+
+# Upscale
+
+https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth
+  dir=/home/runner/ComfyUI/models/upscale_models
+
+https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth
+  dir=/home/runner/ComfyUI/models/upscale_models
+
+https://huggingface.co/sberbank-ai/Real-ESRGAN/resolve/main/RealESRGAN_x2.pth
+  dir=/home/runner/ComfyUI/models/upscale_models
+  out=RealESRGAN_x2.pth
+
+https://huggingface.co/sberbank-ai/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth
+  dir=/home/runner/ComfyUI/models/upscale_models
+  out=RealESRGAN_x4.pth
+
+################################################################################
+
+# Face
+
+https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth
+  dir=/home/runner/ComfyUI/models/face_restore
+
+https://huggingface.co/deepinsight/inswapper/resolve/main/inswapper_128.onnx
+  dir=/home/runner/ComfyUI/models/insightface
+  out=inswapper_128.onnx
+
+################################################################################
+
+# LORAs
+
+# 3D Render Style
+# https://civitai.com/models/119328/3d-render-style-xl-or-goofy-ai?modelVersionId=129610
+https://civitai.com/api/download/models/129610
+  dir=/home/runner/ComfyUI/models/loras
+
+https://huggingface.co/OedoSoldier/detail-tweaker-lora/resolve/main/add_detail.safetensors
+  dir=/home/runner/ComfyUI/models/loras
+  out=add_detail.safetensors
+
+# Angst
+# https://civitai.com/models/126431/angst-illustrative-art-style
+https://civitai.com/api/download/models/138250
+  dir=/home/runner/ComfyUI/models/loras
+
+# Embroidery
+# https://civitai.com/models/122308/embroidery-style-sdxl?modelVersionId=133177
+https://civitai.com/api/download/models/133177
+  dir=/home/runner/ComfyUI/models/loras
+
+
+################################################################################
+
+# Impact Pack
+
+https://huggingface.co/dustysys/ddetailer/resolve/main/mmdet/bbox/mmdet_anime-face_yolov3.pth
+  dir=/home/runner/ComfyUI/models/mmdets/bbox
+  out=mmdet_anime-face_yolov3.pth
+
+https://raw.githubusercontent.com/Bing-su/dddetailer/master/config/mmdet_anime-face_yolov3.py
+  dir=/home/runner/ComfyUI/models/mmdets/bbox
+  out=mmdet_anime-face_yolov3.py
+
+https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
+  dir=/home/runner/ComfyUI/models/sams
+
+https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov8m.pt
+  dir=/home/runner/ComfyUI/models/ultralytics/bbox
+  out=face_yolov8m.pt
+
+https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov8s.pt
+  dir=/home/runner/ComfyUI/models/ultralytics/bbox
+  out=hand_yolov8s.pt
+
+https://huggingface.co/Bingsu/adetailer/resolve/main/person_yolov8m-seg.pt
+    dir=/home/runner/ComfyUI/models/ultralytics/segm
+    out=person_yolov8m-seg.pt

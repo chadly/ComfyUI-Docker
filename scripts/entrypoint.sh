@@ -4,11 +4,11 @@ set -e
 
 if [ ! -f "/home/runner/.download-complete" ] ; then
 	echo "########################################"
-	echo "Installing Custom Nodes..."
+	echo "Downloading models"
 	echo "########################################"
 
-	python3.10 custom_nodes/ComfyUI-Impact-Pack/install.py
-	python3.10 custom_nodes/comfy_mtb/install.py
+	aria2c --allow-overwrite=false --auto-file-renaming=false --continue=true \
+		--max-connection-per-server=5 --input-file=/home/scripts/download.txt
 
 	touch /home/runner/.download-complete
 fi
