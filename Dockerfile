@@ -56,6 +56,8 @@ RUN --mount=type=cache,target=/root/.cache/pip pip install -r efficiency-nodes-c
 RUN git clone "https://github.com/WASasquatch/was-node-suite-comfyui.git"
 RUN --mount=type=cache,target=/root/.cache/pip pip install -r was-node-suite-comfyui/requirements.txt
 
+RUN git clone "https://github.com/BadCafeCode/masquerade-nodes-comfyui.git"
+
 RUN git clone "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
 
 RUN git clone "https://github.com/melMass/comfy_mtb.git"
