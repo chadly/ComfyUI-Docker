@@ -1,40 +1,4 @@
-################################################################################
-# Dockerfile that builds 'yanwk/comfyui-boot:latest'
-# A runtime environment for https://github.com/comfyanonymous/ComfyUI
-################################################################################
-
-FROM opensuse/tumbleweed:latest
-
-LABEL maintainer="code@yanwk.fun"
-
-RUN --mount=type=cache,target=/var/cache/zypp \
-    set -eu \
-    && zypper refresh \
-    && zypper install --no-confirm \
-        python310 python310-pip \
-        python310-devel \
-        shadow git aria2 \
-        Mesa-libGL1 \
-        gcc gcc-c++ make \
-        ffmpeg ffmpeg-4
-
-# Install PyTorch nightly
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install wheel setuptools numpy \
-    && pip install --pre torch torchvision \
-        --index-url https://download.pytorch.org/whl/nightly/cu118 
-
-# Install xFormers from wheel file we just compiled
-COPY --from=yanwk/comfyui-boot:xformers /wheels /root/wheels
-
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install /root/wheels/*.whl \
-    && rm -rf /root/wheels
-
-# Fix for CuDNN
-WORKDIR /usr/lib64/python3.10/site-packages/torch/lib
-RUN ln -s libnvrtc-672ee683.so.11.2 libnvrtc.so 
-ENV LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/lib64/python3.10/site-packages/torch/lib"
+FROM ghcr.io/chadly/pytorch:latest
 
 WORKDIR /home/runner
 
@@ -65,7 +29,6 @@ WORKDIR /home/runner/ComfyUI/custom_nodes/comfy_mtb
 RUN git submodule update --init --recursive
 RUN --mount=type=cache,target=/root/.cache/pip python3.10 install.py
 
-RUN echo invalidate docker cache
 WORKDIR /home/runner/ComfyUI/custom_nodes/
 
 RUN git clone "https://github.com/chadly/ComfyUI-Impact-Pack.git"
