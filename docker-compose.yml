@@ -8,11 +8,13 @@ services:
     ports:
       - "8188:8188"
     volumes:
-      - "./models:/home/runner/ComfyUI/models"
-      - "./input:/home/runner/ComfyUI/input"
-      - "./output:/home/runner/ComfyUI/output"
-      - "./workflows:/home/runner/ComfyUI/pysssss-workflows"
-      - "./backgrounds:/home/runner/ComfyUI/backgrounds"
+      - "./models:/home/runner/ComfyUI/models:Z"
+      - "./input:/home/runner/ComfyUI/input:Z"
+      - "./output:/home/runner/ComfyUI/output:Z"
+      - "./workflows:/home/runner/ComfyUI/pysssss-workflows:Z"
+      - "./backgrounds:/home/runner/ComfyUI/backgrounds:Z"
+    security_opt:
+      - "label=type:nvidia_container_t"
     environment:
       - CLI_ARGS=
     deploy:
