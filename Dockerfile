@@ -17,9 +17,6 @@ RUN pip install -r ComfyUI-Manager/requirements.txt
 RUN git clone "https://github.com/Fannovel16/comfyui_controlnet_aux/"
 RUN pip install -r comfyui_controlnet_aux/requirements.txt
 
-RUN git clone "https://github.com/LucianoCirino/efficiency-nodes-comfyui.git"
-RUN pip install -r efficiency-nodes-comfyui/requirements.txt
-
 RUN git clone "https://github.com/WASasquatch/was-node-suite-comfyui.git"
 RUN pip install -r was-node-suite-comfyui/requirements.txt
 
