@@ -18,4 +18,4 @@ EXPOSE 8188
 ENV CLI_ARGS=""
 WORKDIR /home/runner/ComfyUI
 
-CMD ["bash","/home/scripts/entrypoint.sh"]
+CMD ["bash","/home/scripts/entrypoint.sh", "--user-directory /home/runner/ComfyUI/user"]

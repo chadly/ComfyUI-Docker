@@ -8,10 +8,9 @@ services:
       - "8188:8188"
     volumes:
       - "./models:/home/runner/ComfyUI/models:Z"
-      - "./input:/home/runner/ComfyUI/input:Z"
-      - "./output:/home/runner/ComfyUI/output:Z"
-      - "./workflows:/home/runner/ComfyUI/pysssss-workflows:Z"
-      - "./backgrounds:/home/runner/ComfyUI/backgrounds:Z"
+      - "./user:/home/runner/ComfyUI/user:Z"
+      - "./user/input:/home/runner/ComfyUI/input:Z"
+      - "./user/output:/home/runner/ComfyUI/output:Z"
     security_opt:
       - "label=type:nvidia_container_t"
     environment:
