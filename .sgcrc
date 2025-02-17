@@ -1,0 +1,81 @@
+{
+	"emoji": true,
+	"lowercaseTypes": true,
+	"endWithDot": false,
+	"types": [
+		{
+			"emoji": "🔧",
+			"type": "Chore",
+			"description": "Changes that affect the build system or external dependencies and moving files",
+			"argKeys": [
+				"c",
+				"chore"
+			]
+		},
+		{
+			"emoji": "👷",
+			"type": "CI",
+			"description": "Changes to our CI configuration files and scripts",
+			"argKeys": [
+				"ci"
+			]
+		},
+		{
+			"emoji": "📝",
+			"type": "Docs",
+			"description": "Documentation only changes",
+			"argKeys": [
+				"d",
+				"docs"
+			]
+		},
+		{
+			"emoji": "✨",
+			"type": "Feat",
+			"description": "New feature",
+			"argKeys": [
+				"f",
+				"feat",
+				"feature"
+			]
+		},
+		{
+			"emoji": "🐛",
+			"type": "Fix",
+			"description": "Bug fix",
+			"argKeys": [
+				"fi",
+				"fix",
+				"bug"
+			]
+		},
+		{
+			"emoji": "⚡️",
+			"type": "Perf",
+			"description": "Code change that improves performance",
+			"argKeys": [
+				"p",
+				"perf",
+				"performance"
+			]
+		},
+		{
+			"emoji": "♻️",
+			"type": "Refactor",
+			"description": "Code change that neither fixes a bug nor adds a feature",
+			"argKeys": [
+				"r",
+				"refactor"
+			]
+		},
+		{
+			"emoji": "🚧",
+			"type": "WIP",
+			"description": "Work in progress",
+			"argKeys": [
+				"w",
+				"wip"
+			]
+		}
+	]
+}
